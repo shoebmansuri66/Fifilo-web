@@ -36,7 +36,7 @@ export default class Carier1 extends Component {
                     
                 </div>
 
-                <div data-aos="fade-left" className="right">
+                <div data-aos="fade-left" className="right13">
                     {/* yaha tum apni image lagana */}
                    
                     <button className="btn2" >Services</button>
@@ -45,7 +45,7 @@ export default class Carier1 extends Component {
                 <button className="btn3">Let's Talk </button>
                 {/* {show&& <Navigate to={"/Contact"} />} */}
             </section>
-            <div className="para" data-fade="fade-top">
+            <div className="para2" data-fade="fade-top">
                 <h1>We’re a dedicated team of UI UX professionals, committed to delivering research-driven,
                      user-centered solutions that transform businesses and inspire users. Our tailored design process, 
                      aligns with your goals and industry needs, ensuring a perfect balance of aesthetics and functionality. 

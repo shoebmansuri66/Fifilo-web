@@ -15,13 +15,13 @@ export default class Navbar extends Component {
                         <h2 style={{color:"#0aeb55ff"}}>O</h2>
                     </div>
 
-                    <nav>
-                        <NavLink to="/">Case Studies</NavLink>
-                        <NavLink to="/About">About</NavLink>
-                        <NavLink to="/Services">Services</NavLink>
-                        <NavLink to="/Career">Career</NavLink>
-                        <NavLink to="/BLogs">Blogs</NavLink>
-                        <NavLink to="/Contact">Contact</NavLink>
+                    <nav >
+                        <NavLink to="/" onclick="setActive(this)" className="nav">Case Studies</NavLink>
+                        <NavLink to="/r"onclick="setActive(this)" className="nav">About</NavLink>
+                        <NavLink to="/Services"onclick="setActive(this)" className="nav">Services</NavLink>
+                        <NavLink to="/about"onclick="setActive(this)" className="nav">Career</NavLink>
+                        <NavLink to="/BLogs"onclick="setActive(this)" className="nav">Blogs</NavLink>
+                        <NavLink to="/Contact"onclick="setActive(this)" className="nav">Contact</NavLink>
                         <span className="material-symbols-outlined"style={ {margin:"-10px",padding:"5px",fontSize:"35px", width:"50px",height:"50px"}}>
                             menu
                         </span>

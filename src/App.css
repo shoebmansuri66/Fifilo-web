@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -45,6 +46,9 @@ nav a {
 
 nav a:hover {
   color: #f4b400;
+}
+.active{
+  color:#f4b400 ;
 }
 
 button {
@@ -323,43 +327,7 @@ section p {
 }
 
 /* Study css  */
-
-.case-section {
-  padding: 100px 80px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: baseline;
- 
-}
-
-.dark-bg {
-  background: #0b0b0b;
-  color: white;
-  display: flex;
-  
-}
-
-.case-heading {
-  width: 190vh;
-  margin-bottom: 50px;
-  text-align: center;
- 
-}
-
-.small-title {
-  font-size: 14px;
-  opacity: 0.7;
-  margin-bottom: 10px;
-}
-
-.case-heading h2 {
-  font-size: 48px;
-}
-
-.case-heading span {
-  color: #f5b301;
-}
+/* niche h  */
 
 /* Cards */
 .case-wrapper {
@@ -670,6 +638,53 @@ section p {
 }
 
 /* ================= CaseStudies.css ================= */
+.hero12 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px;
+  background: linear-gradient(to right, #000000, #1a1a1a);
+  color: white;
+  min-height: 100vh;
+}
+
+/* LEFT SIDE */
+.left12 {
+  max-width: 600px;
+}
+
+.left12 h1 {
+  font-size: 60px;
+  color: #ffb400;
+  margin-bottom: 20px;
+}
+
+.left12 p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+/* RIGHT SIDE */
+.right12 {
+  position: relative;
+}
+
+.right12 img {
+  width: 350px;
+}
+
+.right12 button {
+  position: absolute;
+  top: 12%;
+  right: -50px;
+  padding: 12px 24px;
+  border: 2px solid #ffcc00;
+  border-radius: 30px;
+  background: transparent;
+  color: #ffcc00;
+  cursor: pointer;
+}
 .hero1 {
   background: radial-gradient(circle at right, #2b2b2b, #0b0b0b);
   padding: 100px 80px;
@@ -681,26 +696,10 @@ section p {
   display: flex;
 }
 
-.head12{
-  width: 800px;
-  display: flex;
-  flex-direction: column;
- 
-}
-.hero1-content h1 {
-  margin-left:-100px ;
-  font-size: 48px;
-  font-weight: 500;
-}
-
-.hero1-content h1  {
-  color: #ffb703;
-  font-weight: 700;
-}
 
 .hero1-content p {
   max-width: 520px;
-  margin-top: 16px; 
+  margin-top: px; 
   color: #cfcfcf;
   line-height: 1.6;
 }
@@ -801,3 +800,547 @@ border:1px solid white;
   }
 }
 
+/* =========About========= */
+
+.hero2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px;
+  background: #000;
+  color: white;
+  min-height: 100vh;
+}
+
+/* LEFT SIDE */
+.left2 {
+  max-width: 600px;
+}
+
+.left2 h1 {
+  font-size: 70px;
+  color: #ffb400;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+.left2 p {
+  font-size: 18px;
+  color: #aaa;
+  line-height: 1.6;
+}
+
+/* RIGHT SIDE */
+.right2 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.right2 img {
+  width: 300px;
+}
+
+/* BUTTON PERFECT CENTER BELOW */
+.right2 button {
+  margin-top: 20px;
+  padding: 12px 28px;
+  border-radius: 30px;
+  border: 2px solid #ffb400;
+  background: transparent;
+  color: #ffb400;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.right2 button:hover {
+  background: #ffb400;
+  color: black;
+}
+   /* ======career1====== */
+.hero3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px;
+  background: #000;
+  color: white;
+  min-height: 100vh;
+}
+
+/* LEFT */
+.left3 {
+  max-width: 600px;
+}
+
+.left3 h1 {
+  font-size: 60px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.white {
+  color: #e5e5e5;
+}
+
+.yellow {
+  color: #ffb400;
+}
+
+.left3 p {
+  font-size: 18px;
+  color: #aaa;
+  line-height: 1.6;
+}
+
+/* RIGHT */
+.right3 {
+  position: relative;
+}
+
+.right3 img {
+  width: 450px;
+}
+
+/* GLOW BUTTON 🔥 */
+.glow-btn {
+  position: absolute;
+  top: 20%;
+  right: -30px;
+  padding: 12px 28px;
+  border-radius: 30px;
+  border: none;
+  background: #ffb400;
+  color: black;
+  cursor: pointer;
+
+  box-shadow: 0 0 20px #ffb400;
+  transition: 0.3s;
+}
+
+.glow-btn:hover {
+  box-shadow: 0 0 40px #ffb400;
+  transform: scale(1.05);
+}
+
+/* =====About===== */
+
+/* Custom Fonts (Optional: Font-family ko aap apne project ke hisaab se badal sakte hain) */
+
+
+.about-section {
+  padding: 80px 20px;
+  background-color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  max-width: 1000px; /* Text ki readability ke liye width limit ki gayi hai */
+  margin: 0 auto;
+}
+
+.sub-heading {
+  font-size: 16px;
+  color: #666;
+  font-weight: 400;
+  margin-bottom: 10px;
+  text-transform: none;
+}
+
+.main-heading {
+  font-size: 42px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 30px;
+}
+
+.highlight {
+  color: #ffc107; /* Image wala yellow color */
+}
+
+.description {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #444;
+  font-weight: 400;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .main-heading {
+    font-size: 32px;
+  }
+  
+  .description {
+    font-size: 16px;
+  }
+}
+
+
+/* ====== */
+
+/* Container and Background */
+.process-section {
+  background-color: #0c0d10;
+  color: #ffffff;
+  padding: 80px 20px;
+  position: relative;
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+  overflow: hidden;
+}
+
+/* Grid Pattern */
+.process-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 50px 50px;
+  z-index: 0;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.header p {
+  color: #888;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.header h2 {
+  font-size: 42px;
+  font-weight: 700;
+}
+
+.highlight {
+  color: #ffc107;
+}
+
+/* Timeline Layout */
+.timeline {
+  position: relative;
+  padding: 40px 0;
+}
+
+/* Center Dash Line */
+.timeline::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  border-left: 2px dashed rgba(255, 193, 7, 0.4);
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 80px;
+  width: 100%;
+}
+
+.timeline-content {
+  width: 42%;
+}
+
+.timeline-icon-wrapper {
+  width: 50px;
+  height: 50px;
+  background: #1a1c20;
+  border: 1px solid #333;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+/* Active/Discovery Icon Style */
+.item-left .timeline-icon-wrapper {
+  background: #ffc107;
+  color: #000;
+}
+
+.item-right {
+  flex-direction: row-reverse;
+}
+
+.item-right .timeline-content {
+  text-align: right;
+}
+
+.content-box h4 {
+  font-size: 20px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.item-right h4 {
+  justify-content: flex-end;
+}
+
+/* Title Vertical Line Accent */
+.item-right h4::before {
+  content: '';
+  width: 2px;
+  height: 20px;
+  background: #ffc107;
+  margin-left: 15px;
+  order: 2;
+}
+
+.item-left h4::before {
+  content: '';
+  width: 2px;
+  height: 20px;
+  background: #ffc107;
+  margin-right: 15px;
+}
+
+.content-box p {
+  color: #aaa;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .timeline::after { left: 20px; }
+  .timeline-icon-wrapper { left: 20px; transform: none; }
+  .timeline-item { flex-direction: column; align-items: flex-start; padding-left: 60px; }
+  .timeline-content { width: 100%; text-align: left !important; }
+  .item-right h4 { justify-content: flex-start; }
+  .item-right h4::before { order: 0; margin-left: 0; margin-right: 15px; }
+}
+
+/* ========= */
+/* Pichle CSS mein ye lines add/update karein */
+
+.timeline-icon-wrapper.active {
+  background: #ffc107;
+  color: #000;
+  box-shadow: 0 0 15px rgba(255, 193, 7, 0.3);
+}
+
+/* Jab step active ho toh upar ki line solid dikhane ke liye */
+.item-left.active-step::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 100%;
+    width: 2px;
+    height: 100px; /* Adjust based on your gap */
+    background: #ffc107;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+/* Last handshake icon ke liye positioning */
+.last-item {
+  justify-content: center;
+  margin-bottom: 0;
+  height: 100px;
+}
+
+/* Content Box Title Accent Line (Yellow vertical line) */
+.content-box h4 {
+  border-left: 2px solid #ffc107;
+  padding-left: 15px;
+  margin-left: -17px; /* Line ko box ke bahar set karne ke liye */
+}
+
+.item-right .content-box h4 {
+  border-left: none;
+  border-right: 2px solid #ffc107;
+  padding-left: 0;
+  padding-right: 15px;
+  margin-left: 0;
+  margin-right: -17px;
+}
+
+
+/* ======= */
+
+/* Highlighted Icon Box (Yellow) */
+.timeline-icon-wrapper.highlighted {
+  background-color: #ffc107; /* Yellow background */
+  color: #000000; /* Black icon */
+  border: none;
+  box-shadow: 0 0 20px rgba(255, 193, 7, 0.4); /* Glow effect */
+}
+
+/* Solid line connecting to the yellow box */
+.active-step::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 100%;
+  width: 2px;
+  height: 80px; /* Adjust gap */
+  background-color: #ffc107; /* Solid yellow line */
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+/* Content Box Title for Optimization */
+.item-left.active-step h4 {
+  border-left: 2px solid #ffc107;
+  padding-left: 15px;
+  color: #ffffff;
+}
+
+/* Grid overlay background (ensure it covers the bottom) */
+.process-section {
+  padding-bottom: 150px; /* Extra space at the end */
+}
+
+/* ====== */
+.team-section {
+  padding: 80px 40px;
+  background-color: #f8f9fa; /* Light grey background jaisa image mein hai */
+  font-family: 'Inter', sans-serif;
+}
+
+.team-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  
+  gap: 40px;
+}
+
+.team-header {
+  flex: 0 0 300px; /* Header ki width fixed rakhi hai */
+}
+
+.sub-title {
+  color: #888;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.main-title {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+.highlight {
+  color: #ffc107;
+}
+
+.description {
+  color: #666;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* Cards Grid */
+.team-grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Ek line mein 3 cards */
+  gap: 20px;
+}
+
+.team-card {
+  background: #fff;
+  border-radius: 15px;
+  padding: 15px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+}
+
+.image-container {
+  width: 100%;
+  height: 320px;
+  overflow: hidden;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.info h4 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #000;
+}
+
+.info p {
+  margin: 5px 0 0;
+  font-size: 13px;
+  color: #888;
+}
+
+.linkedin-icon {
+  font-size: 24px;
+  color: #ccc; /* Inactive grey icon */
+  text-decoration: none;
+}
+
+.linkedin-icon.active {
+  color: #0077b5; /* Blue icon for first card */
+}
+
+/* Responsive Logic */
+@media (max-width: 1100px) {
+  .team-container {
+    flex-direction: column;
+  }
+  .team-header {
+    text-align: center;
+    max-width: 100%;
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .team-grid {
+    grid-template-columns: repeat(1, 1fr); /* Mobile pe 1 card */
+  }
+}

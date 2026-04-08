@@ -4,22 +4,27 @@ import "../App.css";
 export default function CaseStudies() {
     return (
         <>
-            {/* HERO SECTION */}
-            <section className="hero1">
-                <div className="hero1-content ">
-                    <div className="head12">
-                        <h1>
-                            Showcasing Our <br /> Finest Case Studies
-                        </h1>
-                        <p>
-                            Take a look at some of our favorite projects, where creativity meets purpose.
-                            See how we bring ideas to life with impactful digital experiences.
-                        </p>
-                    </div>
-                    <button className="cta ">Let’s Connect</button>
-                </div>
-            </section>
+            <div className="hero12">
 
+                <div className="left12">
+                    <h1>
+                        Showcasing Our <br /> Finest Case Studies
+                    </h1>
+
+                    <p>
+                        Take a look at some of our favorite projects, where creativity meets
+                        purpose. See how we bring ideas to life with impactful digital
+                        experiences.
+                    </p>
+                </div>
+
+                <div className="right12">
+                    <img src="https://i.pinimg.com/originals/46/1f/da/461fdab9031a7598237acc456d1fee27.png" alt="sphere" />
+                    <button className="">Let’s Connect</button>
+                </div>
+
+            </div>
+            
             {/* CASE STUDIES */}
             <section className="cases">
                 <CaseCard
