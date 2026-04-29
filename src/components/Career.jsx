@@ -1,325 +1,183 @@
+import React, { useEffect } from "react";
+import { FaLinkedin } from "react-icons/fa";
+import { motion, useScroll, useSpring } from "framer-motion";
+import { Search, Star, PenTool, BarChart3, Handshake } from 'lucide-react';
+import AOS from "aos";
+import "aos/dist/aos.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
+export default function Career() {
+    // AOS Initialization
+    useEffect(() => {
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100,
+        });
+    }, []);
 
-import React from 'react';
-import { FaLinkedin } from 'react-icons/fa'; // Install react-icons for this
+    const { scrollYProgress } = useScroll();
+    const scaleY = useSpring(scrollYProgress, {
+        stiffness: 100,
+        damping: 30,
+        restDelta: 0.001
+    });
 
-export default function Career1() {
+    const steps = [
+        {
+            title: "Discovery:",
+            desc: "We start by understanding your goals and challenges. This helps us align our expertise in design, development, and digital marketing with your vision.",
+            align: "right",
+            icon: <Star size={32} />
+        },
+        {
+            title: "Strategy:",
+            desc: "We develop a tailored strategy that outlines the best approach for your project, whether it’s a new design, a website overhaul, or a marketing campaign.",
+            align: "left",
+            icon: <Search size={32} />
+        },
+        {
+            title: "Design & Development:",
+            desc: "In this phase, we turn insights into engaging designs and build functional, user-friendly websites. Our development team ensures that everything works seamlessly.",
+            align: "right",
+            icon: <PenTool size={32} />
+        },
+        {
+            title: "Implementation:",
+            desc: "We carefully implement and integrate the solutions, making sure they meet your expectations and deliver the results you need.",
+            align: "left",
+            icon: <BarChart3 size={32} />
+        },
+        {
+            title: "Optimization & Support:",
+            desc: "After launch, we continue to refine and support your project to ensure it performs optimally and adapts to any evolving needs.",
+            align: "right",
+            icon: <Handshake size={32} />
+        }
+    ];
+
     const teamMembers = [
-        {
-            id: 1,
-            name: "Mohsin Khan",
-            role: "Co-Founder & CEO",
-            image: "path-to-mohsin-image.jpg",
-            linkedin: "#",
-            isActive: true // First card blue icon ke liye
-        },
-        {
-            id: 2,
-            name: "Abhishek Joshi",
-            role: "Co-Founder & CTO",
-            image: "path-to-abhishek-image.jpg",
-            linkedin: "#",
-            isActive: false
-        },
-        {
-            id: 3,
-            name: "Amit Bisen",
-            role: "Technical Lead",
-            image: "path-to-amit-image.jpg",
-            linkedin: "#",
-            isActive: false
-        },
-    ]
-    const OtherName =[
-          {
-            id: 3,
-            name: "Amit Bisen",
-            role: "Technical Lead",
-            image: "path-to-amit-image.jpg",
-            linkedin: "#",
-            isActive: false
-        },
-        {
-            id: 3,
-            name: "Amit Bisen",
-            role: "Technical Lead",
-            image: "path-to-amit-image.jpg",
-            linkedin: "#",
-            isActive: false
-        },
-        {
-            id: 3,
-            name: "Amit Bisen",
-            role: "Technical Lead",
-            image: "path-to-amit-image.jpg",
-            linkedin: "#",
-            isActive: false
-        },
-        {
-            id: 3,
-            name: "Amit Bisen",
-            role: "Technical Lead",
-            image: "path-to-amit-image.jpg",
-            linkedin: "#",
-            isActive: false
-        },
-        {
-            id: 3,
-            name: "Amit Bisen",
-            role: "Technical Lead",
-            image: "path-to-amit-image.jpg",
-            linkedin: "#",
-            isActive: false
-        },
-        {
-            id: 3,
-            name: "Amit Bisen",
-            role: "Technical Lead",
-            image: "path-to-amit-image.jpg",
-            linkedin: "#",
-            isActive: false
-        },
-        {
-            id: 3,
-            name: "Amit Bisen",
-            role: "Technical Lead",
-            image: "path-to-amit-image.jpg",
-            linkedin: "#",
-            isActive: false
-        },
-        {
-            id: 3,
-            name: "Amit Bisen",
-            role: "Technical Lead",
-            image: "path-to-amit-image.jpg",
-            linkedin: "#",
-            isActive: false
-        },
-        {
-            id: 3,
-            name: "Amit Bisen",
-            role: "Technical Lead",
-            image: "path-to-amit-image.jpg",
-            linkedin: "#",
-            isActive: false
-        },
-        {
-            id: 3,
-            name: "Amit Bisen",
-            role: "Technical Lead",
-            image: "path-to-amit-image.jpg",
-            linkedin: "#",
-            isActive: false
-        },
-        {
-            id: 3,
-            name: "Amit Bisen",
-            role: "Technical Lead",
-            image: "path-to-amit-image.jpg",
-            linkedin: "#",
-            isActive: false
-        },
-    ]
+        { id: 1, name: "Mohsin Khan", role: "Co-Founder & CEO", image: "mohsin-khan.png", linkedin: "https://www.linkedin.com/in/mohsinkhan1710/", isActive: true },
+        { id: 2, name: "Abhishek Joshi", role: "Co-Founder & CTO", image: "abhishek-joshi.png", linkedin: "https://www.linkedin.com/in/abhishek-joshi-5872b4285/", isActive: false },
+        { id: 3, name: "Amit Bisen", role: "Technical Lead", image: "amit-bisen.png", linkedin: "https://www.linkedin.com/in/amitbisen/", isActive: false },
+        { id: 4, name: "VIvek pratap", role: "Sr. Business Executive", image: "vivek-pratap.png", linkedin: "https://www.linkedin.com/in/vivek-pratap-singh/", isActive: false },
+        { id: 5, name: "Pushpraj patel", role: "Sr. Web Developer", image: "pushpraj-patel.png", linkedin: "https://www.linkedin.com/in/patel-pusp/", isActive: false },
+        { id: 6, name: "Rakesh patel", role: "Sr. UI UX Designer", image: "rakesh-patel.png", linkedin: "", isActive: false },
+        { id: 7, name: "Khalid Ali", role: "UI UX Designer", image: "khalid-ali.png", linkedin: "https://www.linkedin.com/in/sayyedkhalidali/", isActive: false },
+        { id: 8, name: "Sahiba Jain", role: "HR Manager", image: "sahiba-jain.png", linkedin: "https://www.linkedin.com/in/sahiba-jain-57b7901ab/", isActive: false },
+        { id: 9, name: "Gagan VshwaKarma", role: "Web Developer", image: "gagan-vishwakarma.png", linkedin: "https://www.linkedin.com/in/gagan-vishwakarma/", isActive: false },
+        { id: 10, name: "Abdul Raique", role: "UI UX Designer", image: "abdul-razique.png", linkedin: "https://www.linkedin.com/in/abdul-razique-800a1023b/", isActive: false },
+        { id: 11, name: "Osaif Ansari", role: "Digital Marketing Executive", image: "osaif-ansari.png", linkedin: "https://www.linkedin.com/in/osaif-ansari-b991412b8/", isActive: false },
+    ];
 
     return (
-        <>
-            <div className="hero3">
+        <div className="overflow-hidden bg-white" style={{marginTop:"-10px"}}>
+            {/* HERO */}
+            <div className="h-100 bg-dark text-white p-5">
+                <div className="row align-items-center">
+                    <div className="col-md-6" data-aos="fade-right">
+                        <h1 className="fw-bold display-5">
+                            Crafting Experiences <br />
+                            <span className="text-warning">Not Just Designs</span>
+                        </h1>
+                        <p className="text-muted mt-3 lead">We bring ideas to life through engaging digital experiences.</p>
+                        <p>Collaborating closely with our clients, we create impactful designs.</p>
+                    </div>
+                    <div className="col-md-6 text-center" data-aos="fade-left">
+                        <img src="https://i.pinimg.com/originals/46/1f/da/461fdab9031a7598237acc456d1fee27.png" alt="" className="img-fluid mb-3" />
+                        <br />
+                        <button className="btn btn-warning px-4">Lets Connect</button>
+                    </div>
+                </div>
+            </div>
 
-                {/* LEFT */}
-                <div className="left3">
-                    <h1 style={{ fontSize: "58px" }}>
-                        <div >Crafting Experiences</div>
-                        <div style={{ color: '#ffb400' }}>Not Just Designs</div>
-                    </h1>
+            {/* ABOUT */}
+            <div className="container text-center py-5" data-aos="fade-up">
+                <h3 className="fs-6 fw-normal">Who we are</h3>
+                <h2 className="fw-bold">
+                    <span className="text-warning">About</span> FIFILO Designs
+                </h2>
+                <p className="text-muted mt-3 px-md-5">Founded by the visionary duo Mohsin Khan and Abhishek Joshi, FIFILO Designs is where creativity meets technology. Inspired by our roots in design innovation, we infuse
+                     every project with a unique blend of artistic flair and strategic insight. Whether you're launching a startup or enhancing an established brand, we transform your vision into memorable digital experiences.
+                     From pixel-perfect UI/UX design to advanced web development and impactful digital marketing, we create solutions that not only work but truly shine.</p>
+            </div>
 
-                    <p>
-                        We bring ideas to life through engaging digital experiences. Collaborating closely with our clients, we create impactful designs that go beyond aesthetics, focusing on connections and real results.
-                    </p>
+            {/* PROCESS */}
+            <section className="bg-black text-white py-5 position-relative" style={{ overflow: "hidden", minHeight: "200vh" }}>
+                <div className="position-absolute top-0 start-0 w-100 h-100 opacity-25"
+                    style={{ backgroundImage: "radial-gradient(#333 1px, transparent 1px)", backgroundSize: "40px 40px" }}>
                 </div>
 
-                {/* RIGHT */}
-                <div className="right3">
-                    <img src="https://i.pinimg.com/originals/46/1f/da/461fdab9031a7598237acc456d1fee27.png" alt="sphere" />
+                <div className="container position-relative">
+                    <div className="text-center mb-5" data-aos="fade-down">
+                        <p className="text-secondary small mb-1 uppercase">Process</p>
+                        <h2 className="fw-bold display-4">Our Work <span className="text-warning">Process</span></h2>
+                    </div>
 
-                    <button className="glow-btn">
-                        Lets Connect
-                    </button>
-                </div>
+                    <div className="position-absolute start-50 translate-middle-x h-100 d-none d-md-block" style={{ width: "2px", backgroundColor: "#333", top: "150px" }}>
+                        <motion.div style={{ scaleY, originY: 0, backgroundColor: "#ffc107", height: "100%", width: "100%", boxShadow: "0 0 15px #ffc107" }} />
+                    </div>
 
-                /</div>
-            <section className="about-section">
-                <div className="container">
-                    <h3 className="sub-heading">Who we are</h3>
-                    <h2 className="main-heading">
-                        <span className="highlight">About</span> FIFILO Designs
-                    </h2>
-                    <p className="description">
-                        Founded by the visionary duo Mohsin Khan and Abhishek Joshi, FIFILO Designs
-                        is where creativity meets technology. Inspired by our roots in design
-                        innovation, we infuse every project with a unique blend of artistic flair
-                        and strategic insight. Whether you're launching a startup or enhancing an
-                        established brand, we transform your vision into memorable digital
-                        experiences. From pixel-perfect UI/UX design to advanced web development
-                        and impactful digital marketing, we create solutions that not only work
-                        but truly shine.
-                    </p>
+                    <div className="row flex-column align-items-center">
+                        {steps.map((step, index) => (
+                            <div key={index} className="col-12 d-flex align-items-center mb-5 position-relative" style={{ minHeight: "300px" }}>
+                                <div className="position-absolute start-50 translate-middle-x z-3">
+                                    <div className="bg-warning rounded-4 d-flex align-items-center justify-content-center shadow"
+                                        style={{ width: "60px", height: "60px", color: "black", border: "4px solid #000" }}>
+                                        {step.icon}
+                                    </div>
+                                </div>
+                                <div className={`col-5 ${step.align === "left" ? "text-end pe-5" : "offset-7 ps-5 text-start"}`}
+                                     data-aos={step.align === "left" ? "fade-right" : "fade-left"}>
+                                    <h4 className="fw-bold border-start border-warning border-4 ps-3 d-inline-block">{step.title}</h4>
+                                    <p className="text-secondary mt-2 small lh-base">{step.desc}</p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </section>
 
-            <div className="process-section">
-                <div className="container">
-                    <div className="header">
-                        <p>Process</p>
-                        <h2>Our Work <span className="highlight">Process</span></h2>
+            {/* TEAM */}
+            <div className="container py-5 my-5">
+                <div className="row">
+                    <div className="col-md-4" data-aos="fade-right">
+                        <p className="text-muted">Team</p>
+                        <h2 className="fw-bold">Our <span className="text-warning">Team</span></h2>
+                        <p className="text-muted">Your design partners for amazing digital experiences.</p>
                     </div>
 
-                    <div className="timeline">
-                        {/* Step 1: Discovery */}
-                        <div className="timeline-item item-left">
-                            <div className="timeline-icon-wrapper">
-                                <span style={{ fontSize: '24px' }}>✦</span>
-                            </div>
-                            <div className="timeline-content">
-                                <div className="content-box">
-                                    <h4>Discovery:</h4>
-                                    <p>
-                                        We start by understanding your goals and challenges. This helps us align our expertise in design, development, and digital marketing with your vision.
-                                    </p>
-                                </div>
-                            </div>
-                            <div style={{ width: '42%' }}></div> {/* Spacer for alignment */}
-                        </div>
-
-                        {/* Step 2: Strategy */}
-                        <div className="timeline-item item-right">
-                            <div className="timeline-icon-wrapper">
-                                <span style={{ fontSize: '20px', color: '#ffc107' }}>🔍</span>
-                            </div>
-                            <div className="timeline-content">
-                                <div className="content-box">
-                                    <h4>Strategy:</h4>
-                                    <p>
-                                        We develop a tailored strategy that outlines the best approach for your project, whether it's a new design, a website overhaul, or a marketing campaign.
-                                    </p>
-                                </div>
-                            </div>
-                            <div style={{ width: '42%' }}></div> {/* Spacer for alignment */}
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div className="process-section">
-                <div className="container">
-                    {/* Pichle steps (Discovery/Strategy) ke baad yahan se continue karein */}
-
-                    <div className="timeline">
-                        {/* Step 3: Design & Development (Right Side) */}
-                        <div className="timeline-item item-left">
-                            <div className="timeline-icon-wrapper active">
-                                {/* Pen/Nib Icon */}
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m12 19 7-7 3 3-7 7-3-3z" /><path d="m18 13-1.5-7.5L2 2l3.5 14.5L13 18l5-5z" /><path d="m2 2 5 5" /><path d="m11 11 1 1" /></svg>
-                            </div>
-                            <div className="timeline-content">
-                                <div className="content-box">
-                                    <h4>Design & Development:</h4>
-                                    <p>
-                                        In this phase, we turn insights into engaging designs and build functional, user-friendly websites. Our development team ensures that everything works seamlessly.
-                                    </p>
-                                </div>
-                            </div>
-                            <div style={{ width: '42%' }}></div>
-                        </div>
-
-                        {/* Step 4: Implementation (Left Side) */}
-                        <div className="timeline-item item-right">
-                            <div className="timeline-icon-wrapper">
-                                {/* Board/Presentation Icon */}
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffc107" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="18" height="12" x="3" y="3" rx="2" /><path d="M9 21h6" /><path d="M12 15v6" /></svg>
-                            </div>
-                            <div className="timeline-content">
-                                <div className="content-box">
-                                    <h4>Implementation:</h4>
-                                    <p>
-                                        We carefully implement and integrate the solutions, making sure they meet your expectations and deliver the results you need.
-                                    </p>
-                                </div>
-                            </div>
-                            <div style={{ width: '42%' }}></div>
-                        </div>
-
-                        {/* Step 5: Final/Support (Center Icon) */}
-                        <div className="timeline-item last-item">
-                            <div className="timeline-icon-wrapper">
-                                {/* Handshake Icon */}
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffc107" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m11 17 2 2 5-5" /><path d="M18 9a2 2 0 0 0-2-2h-2V4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v3H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9Z" /><path d="M10 7h4" /></svg>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-            {/* Step 6: Optimization & Support (Final Step) */}
-            <div className="timeline-item item-left active-step">
-                <div className="timeline-icon-wrapper highlighted">
-                    {/* Handshake Icon */}
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" />
-                        <path d="M22 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" />
-                    </svg>
-                </div>
-                <div className="timeline-content">
-                    <div className="content-box">
-                        <h4>Optimization & Support:</h4>
-                        <p>
-                            After launch, we continue to refine and support your project to ensure it performs optimally and adapts to any evolving needs.
-                        </p>
-                    </div>
-                </div>
-                <div style={{ width: '42%' }}></div>
-            </div>
-
-            <section className="team-section">
-                <div className="team-container">
-                    {/* Left Side Header */}
-                    <div className="team-header">
-                        <p className="sub-title">Team</p>
-                        <h2 className="main-title">
-                            Our <span className="highlight">Team,</span> <br />
-                            Your Design Partners
-                        </h2>
-                        <p className="description">
-                            Revolutionizing digital landscapes with intuitive design,
-                            we craft seamless user experiences that transcend
-                        </p>
-                    </div>
-
-                    {/* Right Side Cards Grid */}
-                    <div className="team-grid ">
-                        <div>
-                            {teamMembers.map((member) => (
-                                <div className="team-card" key={member.id}>
-                                    <div className="image-container">
-                                        <img src={member.image} alt={member.name} />
-                                    </div>
-                                    <div className="card-footer">
-                                        <div className="info">
-                                            <h4>{member.name}</h4>
-                                            <p>{member.role}</p>
+                    <div className="col-md-8">
+                        <div className="row g-4">
+                            {teamMembers.map((member, idx) => (
+                                <div className="col-md-4 col-sm-6" key={member.id} data-aos="zoom-in" data-aos-delay={idx * 50}>
+                                    <div className="card border-0 shadow-sm h-100 team-card">
+                                        <img src={member.image} className="card-img-top" alt={member.name} />
+                                        <div className="card-body d-flex justify-content-between align-items-center">
+                                            <div>
+                                                <h6 className="mb-0 fw-bold">{member.name}</h6>
+                                                <small className="text-muted">{member.role}</small>
+                                            </div>
+                                            <a href={member.linkedin} target="_blank" rel="noreferrer" className={`fs-4 ${member.isActive ? "text-primary" : "text-secondary"}`}>
+                                                <FaLinkedin />
+                                            </a>
                                         </div>
-                                        <a href={member.linkedin} className={`linkedin-icon ${member.isActive ? 'active' : ''}`}>
-                                            <FaLinkedin />
-                                        </a>
                                     </div>
                                 </div>
                             ))}
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
 
-
-
-        </>
+            <style>{`
+                .team-card:hover { transform: translateY(-5px); transition: 0.3s; }
+                @media (max-width: 767px) {
+                    .offset-7 { margin-left: 0 !important; }
+                    .col-5 { width: 100% !important; text-align: center !important; padding: 20px !important; }
+                    .ps-5, .pe-5 { padding: 10px !important; }
+                }
+            `}</style>
+        </div>
     );
 }
